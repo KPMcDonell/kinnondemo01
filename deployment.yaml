@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kinnondemo01
+spec:
+  selector:
+    matchLabels:
+      app: kinnondemo01
+  template:
+    metadata:
+      labels:
+        app: kinnondemo01
+    spec:
+      containers:
+      - name: kinnondemo01
+        image: sbacr02.azurecr.io/kinnondemo01
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 5314
