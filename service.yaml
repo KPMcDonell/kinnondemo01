@@ -8,3 +8,4 @@ spec:
   ports:
   - port: 5314
     targetPort: 5314
+type: loadBalancer
